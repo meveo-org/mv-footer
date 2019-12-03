@@ -92,7 +92,7 @@ export class MvFooter extends LitElement {
       return html`
         <div class="mv-footer-item">
           <slot></slot>
-        </div
+        </div>
       `;
     } else {
       return html`
