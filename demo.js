@@ -112,10 +112,10 @@ export class MvFooterDemo extends LitElement {
       <mv-footer item position="left">
         <div class="styled">Styled text</div>
       </mv-footer>
-      <mv-footer item position="center">
+      <mv-footer item>
         <h3><a href="#">MvFooter<mv-fa icon="copyright" regular></mv-fa></a></h3>
       </mv-footer>
-      <mv-footer item position="center">
+      <mv-footer item>
         <small>(full width)</small>
       </mv-footer>
       <mv-footer item position="right">

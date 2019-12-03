@@ -6,7 +6,7 @@ export class MvFooter extends LitElement {
       item: { type: Boolean, attribute: true },
       // "custom" is only applicable in root node, e.g. <mv-header custom>{...mv-header items}</mv-header>
       custom: { type: Boolean, attribute: true },
-      // valid positions are: "left", "center", "right", default: "left"
+      // valid positions are: "left", "center", "right", default: "center"
       position: { type: String, attribute: true }
     };
   }
@@ -16,11 +16,15 @@ export class MvFooter extends LitElement {
       :host {
         font-family: var(--font-family, Arial);
         font-size: var(--font-size-m, 10pt);
+        --height: var(--mv-footer-height, 40px);
+        --background: var(--mv-footer-background, #F3F3F3);
+        --shadow: var(--mv-footer-shadow, 0 5px 10px 0 rgba(7,17,26,0.2));
         --margin-top: var(--mv-footer-margin-top, 1px);
         --margin-left: var(--mv-footer-margin-left, 0);
         --margin-right: var(--mv-footer-margin-right, 0);
         --total-margins: calc(var(--margin-left) + var(--margin-right));
         --item-padding: var(--mv-footer-item-padding, 10px);
+        --item-color: var(--mv-footer-item-color, #B0B3B6);
       }
 
       footer {        
@@ -32,10 +36,10 @@ export class MvFooter extends LitElement {
         padding-left: var(--item-padding);
         padding-right: var(--item-padding);
         width: calc(100% - var(--total-margins));
-        min-height: var(--mv-footer-height, 40px);
-        max-height: var(--mv-footer-height, 40px);
-        background: var(--mv-footer-background, #F3F3F3);
-        box-shadow: 0 5px 10px 0 rgba(7,17,26,0.2);
+        min-height: var(--height);
+        max-height: var(--height);
+        background: var(--background);
+        box-shadow: var(--shadow);
         transition: margin-left 0.3s;
         transition: margin-right 0.3s;
       }
@@ -66,7 +70,7 @@ export class MvFooter extends LitElement {
       .mv-footer-item ::slotted(*) {
         margin: 0;
         text-decoration: none;
-        color: #B0B3B6;
+        color: var(--item-color);
       }
       
       .mv-footer-item:hover ::slotted(a) {
@@ -79,7 +83,7 @@ export class MvFooter extends LitElement {
     super();
     this.item = false;
     this.custom = false;
-    this.position = "left";
+    this.position = "center";
   }
 
   render() {
