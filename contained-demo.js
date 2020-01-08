@@ -3,7 +3,7 @@ import "mv-button";
 import "mv-font-awesome";
 import "./mv-footer.js";
 
-export class MvContainedDemo extends LitElement {
+export class ContainedFooterDemo extends LitElement {
   static get properties() {
     return {
       value: { type: String, attribute: true }
@@ -101,4 +101,4 @@ export class MvContainedDemo extends LitElement {
   }
 }
 
-customElements.define("mv-contained-demo", MvContainedDemo);
+customElements.define("contained-footer-demo", ContainedFooterDemo);
