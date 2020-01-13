@@ -1,6 +1,6 @@
 # mv-footer
 
- MvFooter is a Meveo component (based on lit-element) that renders a footer component that can be used with [mv-main](https://github.com/meveo-frontend/mv-main).
+ MvFooter is a Meveo component (based on lit-element) that renders a footer component that can be used with [mv-main](https://github.com/meveo-org/mv-main).
 
 ## Features
 * Configurable item positions: `left`, `right`, `center`, default: `center`
@@ -37,4 +37,4 @@ To experiment with the MvFooter component.
 </mv-footer>
 ```
 
-You can also check this [demo](https://manaty.net/mv-footer/)
+You can also check this [demo](https://footer.meveo.org/)
