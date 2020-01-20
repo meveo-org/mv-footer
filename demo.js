@@ -8,7 +8,7 @@ export class MvFooterDemo extends LitElement {
   static get properties() {
     return {
       value: { type: String, attribute: true },
-      open: { type: String, attribute: true }
+      open: { type: Boolean, attribute: true }
     };
   }
 
@@ -72,7 +72,7 @@ export class MvFooterDemo extends LitElement {
       mv-fa[icon="lightbulb"] {
         font-size: 50px;
         cursor: pointer;
-        padding: 20px;
+        margin: 20px;
       }
       
       .theme {
