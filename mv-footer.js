@@ -7,7 +7,11 @@ export class MvFooter extends LitElement {
       // "custom" is only applicable in root node, e.g. <mv-header custom>{...mv-header items}</mv-header>
       custom: { type: Boolean, attribute: true },
       // valid positions are: "left", "center", "right", default: "center"
-      position: { type: String, attribute: true }
+      position: { type: String, attribute: true },
+
+      //  valid theme values are: "light", "dark"
+      //    default: "light"
+      theme: { type: String, attribute: true }
     };
   }
 
@@ -17,14 +21,16 @@ export class MvFooter extends LitElement {
         font-family: var(--font-family, Arial);
         font-size: var(--font-size-m, 10pt);
         --height: var(--mv-footer-height, 40px);
-        --background: var(--mv-footer-background, #F3F3F3);
         --shadow: var(--mv-footer-shadow, 0 5px 10px 0 rgba(7,17,26,0.2));
         --margin-top: var(--mv-footer-margin-top, 1px);
         --margin-left: var(--mv-footer-margin-left, 0);
         --margin-right: var(--mv-footer-margin-right, 0);
         --total-margins: calc(var(--margin-left) + var(--margin-right));
         --item-padding: var(--mv-footer-item-padding, 10px);
-        --item-color: var(--mv-footer-item-color, #B0B3B6);
+        --light-background: var(--mv-footer-light-background, #F3F3F3);
+        --item-light-color: var(--mv-footer-item-light-color, #B0B3B6);
+        --dark-background: var(--mv-footer-dark-background, #373E48);
+        --item-dark-color: var(--mv-footer-item-light-color, #B0B3B6);
       }
 
       footer {        
@@ -76,6 +82,16 @@ export class MvFooter extends LitElement {
       .mv-footer-item:hover ::slotted(a) {
         text-decoration: underline;
       }
+      
+      .light {
+        --background: var(--light-background);
+        --item-color: var(--item-light-color);
+      }
+      
+      .dark {
+        --background: var(--dark-background);
+        --item-color: var(--item-dark-color);
+      }
     `;
   }
 
@@ -84,6 +100,7 @@ export class MvFooter extends LitElement {
     this.item = false;
     this.custom = false;
     this.position = "center";
+    this.theme = "light";
   }
 
   render() {
@@ -96,7 +113,7 @@ export class MvFooter extends LitElement {
       `;
     } else {
       return html`
-      <footer>
+      <footer class="${this.theme}">
       ${this.custom
         ? html`<slot></slot>`
         : html`
