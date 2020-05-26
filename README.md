@@ -38,5 +38,3 @@ To experiment with the MvFooter component.
 ```
 
 You can also check this [demo](https://footer.meveo.org/)
-
-To be continued. Part 2.
