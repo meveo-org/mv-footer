@@ -1,0 +1,22 @@
+{
+  "name": "@meveo-org/mv-footer",
+  "version": "1.0.0",
+  "description": "MvFooter is a Meveo component (based on lit-element) that renders a footer component that can be used with [mv-main](https://github.com/meveo-org/mv-main).",
+  "main": "mv-footer.js",
+  "scripts": {
+    "serve": "es-dev-server --node-resolve --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meveo-org/mv-footer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meveo-org/mv-footer/issues"
+  },
+  "homepage": "https://github.com/meveo-org/mv-footer#readme",
+  "devDependencies": {
+    "es-dev-server": "^1.46.1"
+  }
+}
