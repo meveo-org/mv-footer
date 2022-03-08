@@ -1,6 +1,6 @@
-import { LitElement, html, css } from "lit-element";
-import "mv-button";
-import "mv-font-awesome";
+import { LitElement, html, css } from "lit";
+import "@meveo-org/mv-button";
+import "@meveo-org/mv-font-awesome";
 import "./mv-footer.js";
 
 export class ContainedFooterDemo extends LitElement {
